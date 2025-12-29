@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "video no 2 frontend connection with backend",
+  "keywords": [
+    "node",
+    "maaz"
+  ],
+  "license": "ISC",
+  "author": "Maaz Khan",
+  "type": "module",
+  "main": "server,js",
+  
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
