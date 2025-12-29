@@ -1,0 +1,21 @@
+{
+  "name": "professional-project-setup",
+  "version": "1.0.0",
+  "description": "Professional Project Setup",
+  "keywords": [
+    "javascript",
+    "node",
+    "maaz"
+  ],
+  "license": "ISC",
+  "author": "Maaz Khan",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "prettier": "^3.7.4"
+  }
+}
