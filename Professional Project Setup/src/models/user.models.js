@@ -48,23 +48,21 @@ const userSchema = new mongoose.Schema(
     },
     { timestamps: true })
 
-    userSchema.pre("save",async function(next){
+
+    // It is a middleware that perform password hashing before stored into the database or final destination
+    
+    userSchema.pre("save", async function(){
         if(!this.isModified("password")) return next();
-        
-        this.password= bcrypt.hash(this.password,10)
-        next()
-        
-    })
+        this.password = bcrypt.hash(this.password,10)
+        next();
+    });
 
-
-    userSchema.methods.isPasswordCorrect= async function(password) {
-        return await bcrypt.compare(password,this.password
-
-        )
+    userSchema.methods.isPasswordCorrect=async function(password){
+        return await bcrypt.compare(password,this.password)
     }
 
     userSchema.methods.generateAccessToken=function (){
-        jwt.sign({
+        return jwt.sign({
             _id:this._id,
             username:this.username,
             email:this.email,
@@ -79,7 +77,7 @@ const userSchema = new mongoose.Schema(
 
 
     userSchema.methods.generateRefreshToken=function(){
-        jwt.sign(
+        return jwt.sign(
             {
                 _id:this._id
             },
