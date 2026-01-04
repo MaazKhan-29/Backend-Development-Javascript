@@ -1,7 +1,9 @@
 import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcrypt"
-import { JsonWebToken as jwt } from "jsonwebtoken";
-
+// import jsonwebtoken  from "jsonwebtoken";
+// const jwt=jsonwebtoken
+import jwt from 'jsonwebtoken'
+// import jsonWebToken from 'jsonwebtoken'
 
 
 const userSchema = new mongoose.Schema(
@@ -51,10 +53,10 @@ const userSchema = new mongoose.Schema(
 
     // It is a middleware that perform password hashing before stored into the database or final destination
     
-    userSchema.pre("save", async function(){
-        if(!this.isModified("password")) return next();
-        this.password = bcrypt.hash(this.password,10)
-        next();
+    userSchema.pre("save", async function(next){
+        if(!this.isModified("password")) return ;
+        this.password = await bcrypt.hash(this.password,10);
+        // next()
     });
 
     userSchema.methods.isPasswordCorrect=async function(password){
@@ -66,13 +68,12 @@ const userSchema = new mongoose.Schema(
             _id:this._id,
             username:this.username,
             email:this.email,
-            fullName:this.fullname
+            fullname:this.fullname
         },
         process.env.ACCESS_TOKEN_SECRET
         ,{
-            expriesIn:process.env.ACCESS_TOKEN_EXPIRY
+            expiresIn:process.env.ACCESS_TOKEN_EXPIRY
         })
-    
     }
 
 
@@ -83,7 +84,7 @@ const userSchema = new mongoose.Schema(
             },
             process.env.REFRESH_TOKEN_SECRET,
             {
-                expriesIn:process.env.REFRESH_TOKEN_EXPIRY
+                expiresIn:process.env.REFRESH_TOKEN_EXPIRY
             }
         )
     }
