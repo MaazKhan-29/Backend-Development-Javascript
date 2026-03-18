@@ -1,0 +1,13 @@
+Now We coding here... but to code in github for directly saving our folder lets understand the process
+
+Step 1 : Go to github website create account...sign in...then after login find repository and create new repository
+Step 2 : In your created repo go to code then codespace..click create codespace on main
+Step 3 : You will redirect to a normal software which looks like vscode but there is no environment...we need to select our environment
+Step 4 : To select our environment as node click on file..view..command pallete..write container..click on add dev container..click All definitions..click node.js and js..select version..ok
+Step 5 : Click rebuild to set environment
+Step 6 : Create folder then file and you are done 
+Step 7 : ctrl+shift+G to redirect to saving part..add files which has been modified or created new..enter any msg and commit or click on 3 dot and click push
+Step 8 ; Now you can see your file saved to github repo you can download from there 
+Step 9 : Go back..Click to codespace..you see your engine is still active..delete it(you will not lose your file)
+
+

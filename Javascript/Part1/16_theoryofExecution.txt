@@ -1,0 +1,47 @@
+// Lets understand the Javascript Execution Context
+
+// Execution Context is a concept to describe the environment within which JavaScript code is executed. 
+
+Three types of Execution Contexts exist in JavaScript: 
+1.Global Execution Context  2.Function Execution Context  3.Eval Execution Context(not commonly used).
+
+// 1. Global Execution Context (GEC):
+// This is the default or base context where any JavaScript code runs initially.
+// It creates a global object (window in browsers) and a special object called 'this' which refers to the global object.
+// The GEC is created when the JavaScript engine starts executing the code and it remains until the program ends.
+
+// 2. Function Execution Context (FEC):
+// Every time a function is invoked, a new Function Execution Context is created.
+// Each FEC has its own variable environment, scope chain, and 'this' value.
+// When the function execution is completed, the FEC is destroyed and control returns to the previous
+
+
+Lets understand by one example:
+
+let val1 = 10;
+let val2 = 5
+function addNum(num1, num2){
+    lrt total = num1 + num2;
+    return total;
+}
+let result1 = addNum(val1, val2);
+let result2 = addNum(20, 30);
+
+// Execution Context Creation Steps:
+// 1. Global Execution Context is created when the script starts executing.
+// 2. The global object and 'this' are created.
+// 3. Variable declarations (val1, val2, addNum, result1, result2) are hoisted and initialized to undefined.
+// 4. The code starts executing line by line.
+// 5. When addNum is called, a new Function Execution Context is created for that function call.
+// 6. The parameters (num1, num2) are assigned the values passed during the function call.
+// 7. Local variables (total) are created and initialized. execution context.
+// 8. The function executes and returns the result.
+// 9. Control returns to the Global Execution Context and continues executing the remaining code.
+// 10. Once all code is executed, the Global Execution Context is destroyed when the program ends.
+
+// same occurs for the second call to addNum with different arguments.
+
+// Understanding Execution Contexts is crucial for grasping concepts like scope, closures, and the 'this' keyword in JavaScript.
+
+
+

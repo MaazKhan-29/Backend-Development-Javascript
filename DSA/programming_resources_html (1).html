@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Learning Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-section {
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .topic-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-section:nth-child(even) {
+            border-left-color: #e74c3c;
+        }
+
+        .topic-section:nth-child(odd) {
+            border-left-color: #27ae60;
+        }
+
+        .topic-section:nth-child(4n) {
+            border-left-color: #f39c12;
+        }
+
+        .topic-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topic-count {
+            background: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            font-weight: 500;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .link-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .link-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .link-number {
+            font-weight: 600;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .link-item a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+            display: block;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .link-item a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        .summary {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .summary h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .summary p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: 600;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Programming Learning Resources</h1>
+        
+        <div class="summary">
+            <h2>Complete Learning Path</h2>
+            <p>Curated collection of programming tutorials covering essential topics for developers</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">Total Resources</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Topic Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free Content</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">
+                📊 Data Structures
+                <span class="topic-count">12 Resources</span>
+            </h2>
+            <p style="margin-bottom: 20px; color: #7f8c8d;">Master fundamental data structures including arrays, linked lists, stacks, queues, trees, and graphs</p>
+            <div class="links-grid">
+                <div class="link-item">
+                    <div class="link-number">1.</div>
+                    <a href="https://youtu.be/MwlXNPFLBzE?si=EDuCmxHlZccMAiZi" target="_blank">String</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">2.</div>
+                    <a href="https://youtu.be/FosoYnhpbHA?si=Z9J_rauNlIqKdSdo" target="_blank">Array</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">3.</div>
+                    <a href="https://youtu.be/1byexQBGhas?si=Q4SOImFk2Z_9R-gU" target="_blank">Stack Basic</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">4.</div>
+                    <a href="https://youtu.be/B5RbUqdPK80?si=NPjx7tLWdGPrHvGT" target="_blank">Stack Leetcode+Interview</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">5.</div>
+                    <a href="https://youtu.be/Evn_JL40go4?si=IC3FwzQbDcr04xYt" target="_blank">Stack Infix/Postfix</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">6.</div>
+                    <a href="https://youtu.be/j5hWoyjrl14?si=5TwjvRX06k3wp_0L" target="_blank">Linklist Basics</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">7.</div>
+                    <a href="https://youtu.be/FrGKsNBaq_4?si=uDV-fuve1n-rIT2t" target="_blank">Linklist Interview</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">8.</div>
+                    <a href="https://youtu.be/7heYkXsi5BU?si=GWeqT1kc_UqtSbq9" target="_blank">Linklist Doubly/Circular</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">9.</div>
+                    <a href="https://youtu.be/lXIcS3qXGMY?si=b5zS0sEBoDuG_byJ" target="_blank">Queue Basics</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">10.</div>
+                    <a href="https://youtu.be/Uu6Y8aDSDww?si=NB9DHxq33A8n3hNK" target="_blank">Queue Interview</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">11.</div>
+                    <a href="https://youtu.be/BLE6FwwmlUQ?si=1yv8HXQTnpSSGOZJ" target="_blank">Tree</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">12.</div>
+                    <a href="https://youtu.be/59fUtYYz7ZU?si=dGBPpuUjJ8PmXTrM" target="_blank">Graph</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">
+                🧮 Algorithms
+                <span class="topic-count">9 Resources</span>
+            </h2>
+            <p style="margin-bottom: 20px; color: #7f8c8d;">Learn sorting, searching, dynamic programming, and graph algorithms</p>
+            <div class="links-grid">
+                <div class="link-item">
+                    <div class="link-number">1.</div>
+                    <a href="https://youtube.com/playlist?list=PLgUwDviBIf0rF1w2Koyh78zafB0cz7tea&si=s_adoOw1mWS0w8DG" target="_blank">Greedy Playlist</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">2.</div>
+                    <a href="https://youtu.be/PAgvK1Oku6U?si=YX6Zj18M8c2-9bD5" target="_blank">Binary Search</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">3.</div>
+                    <a href="https://youtu.be/OBSqZ2L0G10?si=pzpnbMYRh7WVGNJp" target="_blank">Backtracking 1</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">4.</div>
+                    <a href="https://youtube.com/playlist?list=PLgUwDviBIf0rVwua0kKYlsS_ik_1lyVK_&si=SUUzAPObiXBtC6iU" target="_blank">Backtracking 2</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">5.</div>
+                    <a href="https://youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&si=LyaP50EWfzV77ZGC" target="_blank">Time and Space Complexity</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">6.</div>
+                    <a href="https://youtu.be/PAgvK1Oku6U?si=YX6Zj18M8c2-9bD5" target="_blank">Hashing</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">7.</div>
+                    <a href="https://youtu.be/OBSqZ2L0G10?si=pzpnbMYRh7WVGNJp" target="_blank">Question on Hashing</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">8.</div>
+                    <a href="https://youtube.com/playlist?list=PLgUwDviBIf0rVwua0kKYlsS_ik_1lyVK_&si=SUUzAPObiXBtC6iU" target="_blank">Others</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">9.</div>
+                    <a href="https://youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&si=LyaP50EWfzV77ZGC" target="_blank">Dynamic Programming</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">
+                🧠 Aptitude & Problem Solving
+                <span class="topic-count">2 Resources</span>
+            </h2>
+            <p style="margin-bottom: 20px; color: #7f8c8d;">Improve logical thinking and problem-solving skills for competitive programming</p>
+            <div class="links-grid">
+                <div class="link-item">
+                    <div class="link-number">1.</div>
+                    <a href="https://youtube.com/@feelfreetolearn?si=iAGWMgv_fFQCBD6o" target="_blank">Reference 1</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">2.</div>
+                    <a href="https://youtube.com/@careerrideofficial?si=ooJ1e6r5XIBXwS7_" target="_blank">Reference 2</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2 class="topic-title">
+                💬 Communication & Soft Skills
+                <span class="topic-count">2 Resources</span>
+            </h2>
+            <p style="margin-bottom: 20px; color: #7f8c8d;">Enhance communication skills and professional development</p>
+            <div class="links-grid">
+                <div class="link-item">
+                    <div class="link-number">1.</div>
+                    <a href="https://www.youtube.com/live/ShbayVa1uDc?si=Oz-mHseUDLBdsLRa" target="_blank">Reference 1</a>
+                </div>
+                <div class="link-item">
+                    <div class="link-number">2.</div>
+                    <a href="https://youtube.com/@feelfreetolearn?si=iAGWMgv_fFQCBD6o" target="_blank">Reference 2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

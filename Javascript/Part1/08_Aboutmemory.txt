@@ -1,0 +1,39 @@
+There are two types of memory allocation in JavaScript:
+1. Stack Memory
+2. Heap Memory
+
+We know that we have two types of data types in JavaScript: Primitive and Non-Primitive.
+
+1.Primitive data types are stored in Stack Memory. 
+2.Non-Primitive data types are stored in Heap Memory.
+
+Now lets understand both types of memory allocation in detail.
+
+1. Stack Memory:
+It is a memory where we get copies instead of references.
+
+For Example:
+let a = 10; // 'a' is stored in stack memory
+let b = a;  // 'b' gets a copy of the value of 'a
+b = 20;     // changing 'b' does not affect 'a'
+console.log(a); // Output: 10
+console.log(b); // Output: 20
+
+In the above example, 'a' and 'b' are stored in stack memory. When we assign 'a' to 'b', 'b' gets a copy of the value of 'a'. Changing 'b' does not affect 'a'.
+
+2. Heap Memory:
+It is a memory where we get references instead of copies.
+
+For Example:
+let obj1 = { name: "Alice" }; // 'obj1' is stored in heap memory
+let obj2 = obj1;               // 'obj2' gets a reference to 'obj1
+obj2.name = "Bob";            // changing 'obj2' affects 'obj1'
+console.log(obj1.name); // Output: Bob
+console.log(obj2.name); // Output: Bob
+
+In the above example, 'obj1' and 'obj2' are stored in heap memory. When we assign 'obj1' to 'obj2', 'obj2' gets a reference to 'obj1'. Changing 'obj2' affects 'obj1'.
+
+Conclusion:
+Understanding the difference between stack and heap memory is crucial for effective memory management in JavaScript. Primitive data types are stored in stack memory, while non-primitive data types are stored in heap memory. 
+This distinction helps in understanding how data is accessed and modified in JavaScript.
+
