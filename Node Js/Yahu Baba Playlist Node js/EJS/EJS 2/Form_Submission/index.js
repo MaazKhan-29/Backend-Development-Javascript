@@ -8,6 +8,7 @@ app.set('views', './views')
 // 1st Method:
 // app.use(urlencoded({ extended: false }))
 
+
 //2nd Method
 app.use(express.urlencoded({ extended: false }))
 
