@@ -1,0 +1,20 @@
+{
+  "name": "01_basic",
+  "version": "1.0.0",
+  "description": "My First Express Server",
+  "keywords": [
+    "node",
+    "maaz"
+  ],
+  "license": "ISC",
+  "author": "Maaz Khan",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
